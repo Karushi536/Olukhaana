@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #F8F9FA;
+}
+
+.sidebar {
+    background-color: #3C2456;
+    color: #FFFFFF;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu-item {
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #52448E;
+    border-radius: 5px;
+}
+
+.sidebar .dropdown {
+    margin-bottom: 20px;
+}
+
+.sidebar .dropdown-btn {
+    background-color: #B2CAE7;
+    color: #000;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar .dropdown-btn:hover {
+    background-color: #A2BAD7;
+}
+
+.sidebar .dropdown-content {
+    display: none;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar .dropdown-content a {
+    color: #3C2456;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar .dropdown-content a:hover {
+    background-color: #E6E6E6;
+}
+
+.sidebar .dropdown.active .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.header .logo {
+    font-size: 24px;
+    color: #00CFE8;
+    font-weight: bold;
+}
+
+.header .search-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .search-container input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.header .search-container button {
+    padding: 5px;
+    margin-left: 5px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+
+.header .icons .icon {
+    font-size: 24px;
+    color: #3C2456;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.suggestions-box {
+    background-color: #A9A9A9;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="menu-item">
+            <span class="dropdown-btn">Events</span>
+            <div class="dropdown-content">
+                <a href="#">Software Engineering</a>
+                <a href="#">Data</a>
+                <a href="#">Cloud</a>
+                <a href="#">Hackathons</a>
+                <a href="#">Tech summit</a>
+                <a href="#">Finance</a>
+            </div>
+        </div>
+        <div class="menu-item">Reminders</div>
+        <div class="menu-item">Chats</div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button>&#128269;</button>
+            </div>
+            <div class="icons">
+                <div class="icon">&#128276;</div>
+                <div class="icon">&#128100;</div>
+            </div>
+        </div>
+
+        <div class="suggestions-box">
+            We can have suggestions looping in the background!
+        </div>
+    </div>
+
+</body>
+</html>
